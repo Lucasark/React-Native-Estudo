@@ -1,39 +1,22 @@
-import React, { Component }from 'react';
+import React, { Component } from 'react';
 
 import{
-  Text,
-  Button,
-  View,
-  StyleSheet,
-  AppRegistry,
-  Image
+    View,
+    AppRegistry
 } from 'react-native';
+
+import ListaItens from './src/components/ListaItens';
 
 
 class RNE extends Component{
-    constructor(props){
-        super(props);
-        this.state = {
-            escolhaPlayer: '',
-            escolhaCPU: '',
-            resultado: ''
-        }
-    }
 
     render(){
         return(
-        <View> 
-            <Text>Quero cafe!</Text>
-        </View>
+            <View>
+                <ListaItens></ListaItens>
+            </View>
         );
     }
 }
 
-const styles = StyleSheet.create(
-    {
-        btnEscolha: {
-            width: 90
-        }
-    }
-)
 AppRegistry.registerComponent('RNE', () => RNE);
